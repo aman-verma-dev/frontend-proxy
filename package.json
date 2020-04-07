@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "anyproxy --port 8888 --intercept --rule rules.js"
   },
   "author": "",
   "license": "ISC",
