@@ -6,6 +6,8 @@ var mime = require('mime-types');
 var rules = YAML.parse(fs.readFileSync('./rules.yml', 'utf-8')).filter(rule => !rule.disabled);
 var whiteListedDomains = YAML.parse(fs.readFileSync('./whitelistedDomains.yml', 'utf-8'));
 
+const stringTextExtensions = ['js', 'css', 'txt'];
+
 module.exports = {
   summary: 'a rule to hack response',
   *beforeSendRequest(requestDetail) {
@@ -61,17 +63,26 @@ function handleResponseBody(rule, requestUrl) {
     });
 
     console.log('fileName', fileName);
-    var body = fs.readFileSync(path.resolve(fileName), "utf-8");
+    var body = handleUTF8File(fileName);
+    
     return {
       body,
       contentType: mime.contentType(path.extname(fileName))
     };
   }
   else {
-    var body = fs.readFileSync(path.resolve(rule.fileName), "utf-8");
+    var body = handleUTF8File(rule.fileName)
     return {
       body,
       contentType: mime.contentType(path.extname(fileName))
     };
   }
+}
+
+function handleUTF8File (fileName) {
+  const fileExtension = path.extname(fileName).slice(1);
+  const isUTF8Readable = stringTextExtensions.find(item => item === fileExtension) ? true: false;
+  return isUTF8Readable 
+    ? fs.readFileSync(path.resolve(fileName), "utf-8")
+    : fs.readFileSync(path.resolve(fileName))
 }
