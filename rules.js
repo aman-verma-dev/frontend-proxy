@@ -3,17 +3,17 @@ var path = require('path');
 var YAML = require('yaml');
 var mime = require('mime-types');
 
-var rules = YAML.parse(fs.readFileSync('./rules.yml', 'utf-8'));
+var rules = YAML.parse(fs.readFileSync('./rules.yml', 'utf-8')).filter(rule => !rule.disabled);
 var whiteListedDomains = YAML.parse(fs.readFileSync('./whitelistedDomains.yml', 'utf-8'));
 
 module.exports = {
   summary: 'a rule to hack response',
   *beforeSendRequest(requestDetail) {
     var requestUrl = requestDetail.url;
-    console.log('requestUrl', requestUrl);
+    // console.log('requestUrl', requestUrl);
     var matchingRule = rules.find((rule) => matchRule(rule, requestUrl));
     if (matchingRule) {
-      // console.log('matched')
+      console.log('matched', requestUrl);
       var {body, contentType} = handleResponseBody(matchingRule, requestUrl);
       return {
         response: {

@@ -1,16 +1,26 @@
 - url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
-  backup_URL: /.+\/5\/124\/(?'folderName'[c|i|j])\/(?'fileName'\b.+\b)\..+\.(?'extension'\b.+\b)$/
-  fileName: /home/varun/mocks/dashboard.html
-  fileNamePattern: /home/varun/gitlab/static5_1/124/dist/$1/$2.$3
-  type: regex
   name: static5_1-124-Production-Hashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static5_1/124/dist/$1/$2.$3
+  backup_URL: /.+\/5\/124\/(?'folderName'[c|i|j])\/(?'fileName'\b.+\b)\..+\.(?'extension'\b.+\b)$/
+  disabled: true
 
 - url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
-  backup_URL: /.+\/5\/124\/(?'folderName'[c|i|j])\/(?'fileName'\b.+\b)\.(?'extension'\b.+\b)$/
-  fileName: /home/varun/mocks/dashboard.html
+  name: static5_1-124-Production-NonHashed
   fileNamePattern: /home/varun/gitlab/static5_1/124/dist/$1/$2.$3
   type: regex
-  name: static5_1-124-Production-NonHashed
+  disabled: true
+
+- url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: static5-124-Production-Hashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static5/124/dist/$1/$2.$3
+
+- url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: static5-124-Production-NonHashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static5/124/dist/$1/$2.$3
 
 - url: https://rms.naukri.com/admin/dashboard
   fileName: /home/varun/mocks/dashboard.html
+  disabled: true
