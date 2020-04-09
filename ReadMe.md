@@ -20,7 +20,7 @@ Add the certificate generated to trusted certificate store in your browser.
 
 ## Proxy Settings
 
-Change the browser proxy settings to 127.0.0.1:8888 for both HTTP and HTTPS, or use extension 'Proxy SwitchyOmega' to manage this settings
+Change the browser proxy settings to 127.0.0.1:8888 for both HTTP and HTTPS, or use extension 'Proxy SwitchyOmega' to manage this setting
 
 ## Run AnyProxy
 
