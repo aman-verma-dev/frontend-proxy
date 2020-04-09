@@ -12,6 +12,12 @@ npm install -g anyproxy
 
 Version: 4.1.2
 
+## Certificate Generation for HTTPS
+
+Run this command: `anyproxy-ca` in your command line,
+
+Add the certificate generated to trusted certificate store in your browser.
+
 ## Run AnyProxy
 
 ### Default configuration 
