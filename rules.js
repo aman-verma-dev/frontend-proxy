@@ -6,7 +6,7 @@ var mime = require('mime-types');
 var rules = YAML.parse(fs.readFileSync('./rules.yml', 'utf-8')).filter(rule => !rule.disabled);
 var whiteListedDomains = YAML.parse(fs.readFileSync('./whitelistedDomains.yml', 'utf-8'));
 
-const stringTextExtensions = ['js', 'css', 'txt'];
+const stringTextExtensions = ['js', 'css', 'txt', 'html'];
 
 module.exports = {
   summary: 'a rule to hack response',
@@ -44,17 +44,18 @@ function matchRule(rule, requestUrl) {
     return r.test(requestUrl);
   }
   else {
-    // console.log(requestUrl);
+    console.log(requestUrl);
     return requestUrl.includes(rule.url)
   }
 }
 
 function handleResponseBody(rule, requestUrl) {
-  var r = new RegExp(rule.url)
-  var results = r.exec(requestUrl);
-  var groups = results.slice(1);
+  
   // console.log('groups', groups);
   if(rule.fileNamePattern) {
+    var r = new RegExp(rule.url)
+    var results = r.exec(requestUrl);
+    var groups = results.slice(1);
     
     var stringsToBeReplaced = rule.fileNamePattern.match(/\$\d+/g);
     var fileName = rule.fileNamePattern;
@@ -71,10 +72,12 @@ function handleResponseBody(rule, requestUrl) {
     };
   }
   else {
-    var body = handleUTF8File(rule.fileName)
+    var body = handleUTF8File(rule.fileName);
+    console.log('fileName', rule.fileName);
+    
     return {
       body,
-      contentType: mime.contentType(path.extname(fileName))
+      contentType: mime.contentType(path.extname(rule.fileName))
     };
   }
 }

@@ -15,12 +15,32 @@
   name: static5-124-Production-Hashed
   type: regex
   fileNamePattern: /home/varun/gitlab/static5/124/dist/$1/$2.$3
+  disabled: true
 
 - url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static5-124-Production-NonHashed
   type: regex
   fileNamePattern: /home/varun/gitlab/static5/124/dist/$1/$2.$3
+  disabled: true
 
-- url: https://rms.naukri.com/admin/dashboard
-  fileName: /home/varun/mocks/dashboard.html
+- url: '^.+\/volunteers.naukri.com\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: covid19-Production-Hashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static5/covid19/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/volunteers.naukri.com\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: covid19-Production-NonHashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static5/covid19/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/4\/124\/([c|i|j])\/(projectpublish)\..+\.(\b.+\b)$'
+  name: static4-124-Production-Hashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static4/124/src/$1/$2.$3
+  disabled: true
+
+- url: https://rms.naukri.com/project/otherDetails
+  fileName: /home/varun/mocks/other-details.html
   disabled: true
