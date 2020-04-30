@@ -15,13 +15,25 @@
   name: static5-124-Production-Hashed
   type: regex
   fileNamePattern: /home/varun/gitlab/static5/124/dist/$1/$2.$3
-  disabled: true
+  disabled: false
 
 - url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static5-124-Production-NonHashed
   type: regex
   fileNamePattern: /home/varun/gitlab/static5/124/dist/$1/$2.$3
-  disabled: true
+  disabled: false
+
+- url: '^.+\/4\/124\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: static4-124-Production-Hashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static4/124/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/4\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: static4-124-Production-NonHashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static4/124/dist/$1/$2.$3
+  disabled: false
 
 - url: '^.+\/volunteers.naukri.com\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
   name: covid19-Production-Hashed
@@ -35,10 +47,22 @@
   fileNamePattern: /home/varun/gitlab/static5/covid19/dist/$1/$2.$3
   disabled: false
 
-- url: '^.+\/4\/124\/([c|i|j])\/(projectpublish)\..+\.(\b.+\b)$'
+- url: '^.+\/echo.naukri.com\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: covid19-Production-Hashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static5/covid19/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/echo.naukri.com\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: covid19-Production-NonHashed
+  type: regex
+  fileNamePattern: /home/varun/gitlab/static5/covid19/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/4\/124\/([c|i|j])\/(raiseRequestManager)\.(.+)\.(\b.+\b)$'
   name: static4-124-Production-Hashed
   type: regex
-  fileNamePattern: /home/varun/gitlab/static4/124/src/$1/$2.$3
+  fileNamePattern: /home/varun/mocks/$3.$4.$5
   disabled: true
 
 - url: https://rms.naukri.com/project/otherDetails
