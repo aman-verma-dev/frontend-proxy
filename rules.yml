@@ -1,70 +1,59 @@
 - url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
-  name: static5_1-124-Production-Hashed
-  type: regex
-  fileNamePattern: /home/varun/gitlab/static5_1/124/dist/$1/$2.$3
-  backup_URL: /.+\/5\/124\/(?'folderName'[c|i|j])\/(?'fileName'\b.+\b)\..+\.(?'extension'\b.+\b)$/
-  disabled: true
-
-- url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
-  name: static5_1-124-Production-NonHashed
-  fileNamePattern: /home/varun/gitlab/static5_1/124/dist/$1/$2.$3
-  type: regex
-  disabled: true
-
-- url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
   name: static5-124-Production-Hashed
   type: regex
-  fileNamePattern: /home/varun/gitlab/static5/124/dist/$1/$2.$3
+  fileNamePattern: /home/aman/static5/124/dist/$1/$2.$3
   disabled: false
 
 - url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static5-124-Production-NonHashed
   type: regex
-  fileNamePattern: /home/varun/gitlab/static5/124/dist/$1/$2.$3
+  fileNamePattern: /home/aman/static5/124/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/5\/124_rms_reports\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: static5-124_rms_reports-Production-Hashed
+  type: regex
+  fileNamePattern: /home/aman/static5/124_rms_reports/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/5\/124_rms_reports\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: static5-124_rms_reports-Production-NonHashed
+  type: regex
+  fileNamePattern: /home/aman/static5/124_rms_reports/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/5\/102\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: static5-102-Hashed
+  type: regex
+  fileNamePattern: /home/aman/static5/102/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/5\/102\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: static5-102-NonHashed
+  type: regex
+  fileNamePattern: /home/aman/static5/102/dist/$1/$2.$3
+  disabled: false
+
+- url: '^.+\/5p\/124\/.+\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: static5-124-Docker-NonHashed
+  type: regex
+  fileNamePattern: /home/aman/static5/124/dist/$1/$2.$3
   disabled: false
 
 - url: '^.+\/4\/124\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
   name: static4-124-Production-Hashed
   type: regex
-  fileNamePattern: /home/varun/gitlab/static4/124/dist/$1/$2.$3
+  fileNamePattern: /home/aman/static4/124/src/$1/$2.$3
   disabled: false
 
 - url: '^.+\/4\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static4-124-Production-NonHashed
   type: regex
-  fileNamePattern: /home/varun/gitlab/static4/124/dist/$1/$2.$3
+  fileNamePattern: /home/aman/static4/124/src/$1/$2.$3
   disabled: false
 
-- url: '^.+\/volunteers.naukri.com\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
-  name: covid19-Production-Hashed
+- url: '^.+\/4p\/124\/.+\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: static4-124-Docker-NonHashed
   type: regex
-  fileNamePattern: /home/varun/gitlab/static5/covid19/dist/$1/$2.$3
+  fileNamePattern: /home/aman/static4/124/src/$1/$2.$3
   disabled: false
-
-- url: '^.+\/volunteers.naukri.com\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
-  name: covid19-Production-NonHashed
-  type: regex
-  fileNamePattern: /home/varun/gitlab/static5/covid19/dist/$1/$2.$3
-  disabled: false
-
-- url: '^.+\/echo.naukri.com\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
-  name: covid19-Production-Hashed
-  type: regex
-  fileNamePattern: /home/varun/gitlab/static5/covid19/dist/$1/$2.$3
-  disabled: false
-
-- url: '^.+\/echo.naukri.com\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
-  name: covid19-Production-NonHashed
-  type: regex
-  fileNamePattern: /home/varun/gitlab/static5/covid19/dist/$1/$2.$3
-  disabled: false
-
-- url: '^.+\/4\/124\/([c|i|j])\/(raiseRequestManager)\.(.+)\.(\b.+\b)$'
-  name: static4-124-Production-Hashed
-  type: regex
-  fileNamePattern: /home/varun/mocks/$3.$4.$5
-  disabled: true
-
-- url: https://rms.naukri.com/project/otherDetails
-  fileName: /home/varun/mocks/other-details.html
-  disabled: true

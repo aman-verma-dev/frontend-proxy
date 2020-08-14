@@ -32,7 +32,8 @@ module.exports = {
 
   *beforeDealHttpsRequest(requestDetail) {
     var requestUrl = requestDetail.host.split(':')[0];
-    return whiteListedDomains.includes(requestUrl) ? (console.log('allowed'),  true): false ;
+    // return whiteListedDomains.includes(requestUrl) ? (console.log('allowed'),  true): false ;
+    return true;
   }
 };
 
