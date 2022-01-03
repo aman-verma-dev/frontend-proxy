@@ -2,58 +2,130 @@
   name: static5-124-Production-Hashed
   type: regex
   fileNamePattern: /home/aman/static5/124/dist/$1/$2.$3
-  disabled: false
+  disabled: true
 
 - url: '^.+\/5\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static5-124-Production-NonHashed
   type: regex
   fileNamePattern: /home/aman/static5/124/dist/$1/$2.$3
-  disabled: false
+  disabled: true
 
 - url: '^.+\/5\/124_rms_reports\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
   name: static5-124_rms_reports-Production-Hashed
   type: regex
   fileNamePattern: /home/aman/static5/124_rms_reports/dist/$1/$2.$3
-  disabled: false
+  disabled: true
 
 - url: '^.+\/5\/124_rms_reports\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static5-124_rms_reports-Production-NonHashed
   type: regex
   fileNamePattern: /home/aman/static5/124_rms_reports/dist/$1/$2.$3
-  disabled: false
+  disabled: true
 
 - url: '^.+\/5\/102\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
   name: static5-102-Hashed
   type: regex
-  fileNamePattern: /home/aman/static5/102/dist/$1/$2.$3
-  disabled: false
+  fileNamePattern: /home/aman/static5/102/gen/$1/$2.$3
+  disabled: true
 
 - url: '^.+\/5\/102\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static5-102-NonHashed
   type: regex
-  fileNamePattern: /home/aman/static5/102/dist/$1/$2.$3
-  disabled: false
+  fileNamePattern: /home/aman/static5/102/gen/$1/$2.$3
+  disabled: true
 
 - url: '^.+\/5p\/124\/.+\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static5-124-Docker-NonHashed
   type: regex
   fileNamePattern: /home/aman/static5/124/dist/$1/$2.$3
-  disabled: false
+  disabled: true
+
+- url: '^.+\/4\/102\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: static4-102-Production-Hashed
+  type: regex
+  fileNamePattern: /home/aman/static4/102/src/$1/$2.$3
+  disabled: true
+
+- url: '^.+\/4\/102\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: static4-102-Production-NonHashed
+  type: regex
+  fileNamePattern: /home/aman/static4/102/src/$1/$2.$3
+  disabled: true
 
 - url: '^.+\/4\/124\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
   name: static4-124-Production-Hashed
   type: regex
   fileNamePattern: /home/aman/static4/124/src/$1/$2.$3
-  disabled: false
+  disabled: true
 
 - url: '^.+\/4\/124\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static4-124-Production-NonHashed
   type: regex
   fileNamePattern: /home/aman/static4/124/src/$1/$2.$3
-  disabled: false
+  disabled: true
 
 - url: '^.+\/4p\/124\/.+\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
   name: static4-124-Docker-NonHashed
   type: regex
   fileNamePattern: /home/aman/static4/124/src/$1/$2.$3
+  disabled: true
+
+- url: 'https://static.naukri.com/s/0/0/j/nLoggerJB_v3.0.min.js'
+  name: static0-0-Production-NonHashed
+  type: string
+  fileName: '/home/aman/Static0/0/gen/j/loggerSPA_v4.9.min.js'
+  disabled: true
+
+- url: 'http://annotate.analytics.infoedge.com\/(css|js)\/(\b.+\b)\..+\..+\.(\b.+\b)$'
+  name: static5-annotation-tool-production
+  type: regex
+  fileNamePattern: /home/aman/static5/annotation_tool/build/static/$1/$2.$3
+  disabled: true
+
+- url: '^.+\/7p\/112\/.+\/([c|i|j])\/(\b.+\b)$'
+  name: static7-112-Docker-NonHashed
+  type: regex
+  fileNamePattern: /home/aman/static7/112/gen/$1/$2
+  disabled: true
+
+- url: '^.+\/7\/112\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: static7-112-Production-Hashed
+  type: regex
+  fileNamePattern: /home/aman/static7/112/gen/$1/$2.$3
   disabled: false
+
+- url: '^.+\/7\/112\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: static7-112-Production-NonHashed
+  type: regex
+  fileNamePattern: /home/aman/static7/112/gen/$1/$2.$3
+  disabled: false
+
+# - url: 'http://annotate.analytics.infoedge.com/js/main.7f913506.chunk.js'
+#   name: static5-annotation-tool-production
+#   type: exact
+#   fileNamePattern: /home/aman/static5/annotation_tool/build/static/js/main.accc96e8.chunk.js
+#   disabled: false
+
+- url: '^.+\/5\/112\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: static5-112-Production-Hashed
+  type: regex
+  fileNamePattern: /home/aman/static5/112/dist/$1/$2.$3
+  disabled: true
+
+- url: '^.+\/5\/112\/([c|i|j])\/(\b.+\b)\.(\b.+\b)$'
+  name: static5-112-Production-NonHashed
+  type: regex
+  fileNamePattern: /home/aman/static5/112/gen/$1/$2.$3
+  disabled: true
+
+- url: '^.+\/4\/112\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: static4-112-Production-Hashed
+  type: regex
+  fileNamePattern: /home/aman/Static4/112/src/$1/$2.$3
+  disabled: true
+
+- url: '^.+\/4p\/112\/.+\/([c|i|j])\/(\b.+\b)\..+\.(\b.+\b)$'
+  name: static4-112-Docker-Hashed
+  type: regex
+  fileNamePattern: /home/aman/Static4/112/src/$1/$2.$3
+  disabled: true

@@ -17,11 +17,13 @@ module.exports = {
     if (matchingRule) {
       console.log('matched', requestUrl);
       var {body, contentType} = handleResponseBody(matchingRule, requestUrl);
+      // console.log(body);
       return {
         response: {
           statusCode: 200,
           header: { 
-            'Content-Type': contentType
+            'Content-Type': contentType,
+            'Access-Control-Allow-Origin': '*' 
           },
           body
         }
